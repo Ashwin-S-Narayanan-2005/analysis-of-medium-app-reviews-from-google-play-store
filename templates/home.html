@@ -3,86 +3,126 @@
 <head>
     <title>Home</title>
     <style>
-        
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-h2 {
-    color: #1a73e8;
-    text-align: center;
-    margin-top: 30px;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c3b1b;
+            color: white;
+            overflow-x: hidden;
+        }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
+        header {
+            background-color: #000;
+            color: white;
+        }
 
-textarea {
-    width: 60%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: none;
-}
+        header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
 
-input[type="submit"] {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding-bottom: 2px;
+            font-weight: bold;
+        }
 
-input[type="submit"]:hover {
-    background-color: #155ab6;
-}
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #f87171;
+        }
 
-p {
-    text-align: center;
-    font-size: 18px;
-    padding: 10px;
-}
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
 
-a {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #1a73e8;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .hero {
+            background: url("/static/images/background.jpg") no-repeat center center / cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        .hero h1 {
+            font-size: 34px;
+            font-weight: bold;
+            text-shadow: 1px 1px 6px #000;
+            margin-bottom: 10px;
+        }
 
-.container {
-    width: 80%;
-    margin: auto;
-    max-width: 800px;
-    background-color: white;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 4px #000;
+        }
 
+        .hero a {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h2>Welcome to the Sentiment Analysis App</h2>
-    <a href="/input">Go to Input Page</a>
+    <header>
+        <div class="nav-container">
+            <h1>ANALYSIS OF MEDIUM APP REVIEWS</h1>
+            <nav>
+                <a href="/" class="active">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>WELCOME TO THE ANALYSIS OF MEDIUM APP REVIEWS</h1>
+        <p>Understanding User Sentiments from Google Play Store Reviews</p>
+        <a href="/input">ANALYZE YOUR REVIEW</a>
+    </div>
 </body>
 </html>
