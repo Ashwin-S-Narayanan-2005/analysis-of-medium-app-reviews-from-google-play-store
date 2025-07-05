@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c3b1b;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding-bottom: 2px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #f87171;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .hero {
+            background: url("/static/images/background.jpg") no-repeat center center / cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            font-weight: bold;
+            text-shadow: 1px 1px 6px #000;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 4px #000;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>ANALYSIS OF MEDIUM APP REVIEWS</h1>
+            <nav>
+                <a href="/" class="active">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>WELCOME TO THE ANALYSIS OF MEDIUM APP REVIEWS</h1>
+        <p>Understanding User Sentiments from Google Play Store Reviews</p>
+        <a href="/input">ANALYZE YOUR REVIEW</a>
+    </div>
+</body>
+</html>
